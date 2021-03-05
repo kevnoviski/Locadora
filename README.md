@@ -12,9 +12,9 @@ Configuração
   
 Teste
 
-2 - Abra o projeto no Visual Code e execute =  dotnet run
+	2 - Abra o projeto no Visual Code e execute =  dotnet run
 
-3 - Abra o postman e insira o seguinte endpoint :http://localhost:5000/api/filme/
+	3 - Abra o postman e insira o seguinte endpoint :http://localhost:5000/api/filme/
   
   *Utilizar os metodos:
   
