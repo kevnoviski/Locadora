@@ -51,6 +51,7 @@ namespace Locadora.Models
             }
             catch(Exception ex)
             {
+                Console.WriteLine(ex.StackTrace);
                 _repository.Rollback();
                 return BadRequest();
             }
@@ -138,6 +139,7 @@ namespace Locadora.Models
             }
             catch(Exception ex)
             {
+                Console.WriteLine(ex.StackTrace);
                 _repository.Rollback();
                 return BadRequest();
             }
