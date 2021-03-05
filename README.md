@@ -2,7 +2,7 @@
 
 Configuração
 
-1 - Configure o Sql Server
+Configure o Sql Server
 
 	*Crie o usuario 'LocadoraAPI' com a senha = 'senha';
   
@@ -12,11 +12,11 @@ Configuração
   
 Teste
 
-	2 - Abra o projeto no Visual Code e execute =  dotnet run
+	* Abra o projeto no Visual Code e execute =  dotnet run
 
-	3 - Abra o postman e insira o seguinte endpoint :http://localhost:5000/api/filme/
+	* Abra o postman e insira o seguinte endpoint :http://localhost:5000/api/filme/
   
-  *Utilizar os metodos:
+Utilizar os metodos:
   
     GET  /{id} Ex: http://localhost:5000/api/filme/1
     GET        Ex:http://localhost:5000/api/filme
