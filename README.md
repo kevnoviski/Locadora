@@ -4,6 +4,7 @@ Configuração
 
 1 - Configure o Sql Server
   *Crie o usuario 'LocadoraAPI' com a senha = 'senha';
+  *No arquivo \appsettings.json, troque 'OEM-PC\\SQLEXPRESS' pelo nome do seu servidor Sql Server
   execute o script \Locadora\DATABASE_FIRST.sql no Sql Server;
   
 Teste
