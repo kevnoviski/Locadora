@@ -23,14 +23,14 @@ namespace Locadora.Data
             if(transaction != null)
             {
                 transaction.Rollback() ;
-                transaction =null;
+                transaction.Dispose();
             }
         }
         public void Commit(){
             if(transaction != null)
             {
                 transaction.Commit() ;
-                transaction =null;
+                transaction.Dispose();
             }
         }
         public void CreateFilme(Filme filme)
