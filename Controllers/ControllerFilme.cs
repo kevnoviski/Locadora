@@ -9,7 +9,7 @@ using System;
 namespace Locadora.Models
 {
     //configuracao da rota para utilizar a api
-    [Route("locadora/filme")]
+    [Route("api/filme")]
     [ApiController]
     public class ControllerFilme : ControllerBase, IControllerFilme
     {
@@ -24,7 +24,7 @@ namespace Locadora.Models
             _mapper = mapper;
         }
 
-        //POST locadora/filme/
+        //POST api/filme/
         //notações como HttpPost,HttpDelete("{id}").. etc definem qual método devera ser chamado de acordo com a requisição recebida
         [HttpPost]
         public ActionResult<Filme> CreateFilme(FilmeCreateAlterDto filmeDto)
@@ -55,7 +55,7 @@ namespace Locadora.Models
                 return BadRequest();
             }
         }
-        //DELETE locadora/filme/{id}
+        //DELETE api/filme/{id}
         [HttpDelete("{id}")]
         public ActionResult DeleteFilme(int id)
         {
@@ -71,7 +71,7 @@ namespace Locadora.Models
             }
             return NotFound();
         }
-        //DELETE locadora/filme/   -Para deletar multiplos valores insira no corpo da requisicao delete  = [ 4,6,55 ]
+        //DELETE api/filme/   -Para deletar multiplos valores insira no corpo da requisicao delete  = [ 4,6,55 ]
         [HttpDelete]
         public ActionResult DeleteFilmes([FromBody] int[] id)
         {
@@ -91,7 +91,7 @@ namespace Locadora.Models
             return Ok();
         }
 
-        //GET locadora/filme/
+        //GET api/filme/
         [HttpGet]
         public ActionResult<IEnumerable<Filme>> GetAllFilmes()
         {
@@ -103,7 +103,7 @@ namespace Locadora.Models
             return Ok(_mapper.Map<IEnumerable<FilmeReadDto>>(todosOsfilmes));
         }
 
-        //GET locadora/filme/{id}
+        //GET api/filme/{id}
         [HttpGet("{id:int}",Name="GetFilmeById")]
         public ActionResult<Filme> GetFilmeById(int id)
         {
@@ -114,7 +114,7 @@ namespace Locadora.Models
             }
             return NotFound();
         }
-        //PUT locadora/filme/{id}
+        //PUT api/filme/{id}
         [HttpPut("{id:int}")]
         public ActionResult UpdateFilme(int id, FilmeCreateAlterDto filmeDto)
         {
