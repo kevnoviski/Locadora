@@ -3,6 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Locadora.Dtos
 {
+    /*
+        Dto -  Data Transfer objects
+        Usado para validação do conteúdo antes persistir no banco
+    */
     public class FilmeCreateAlterDto
     {
         [Required]

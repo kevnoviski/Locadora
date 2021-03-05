@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Locadora.Model;
+using Locadora.Dtos;
+
 namespace Locadora.Models
 {
     // interface para ajudar a mapear os requisitos 
@@ -16,9 +18,9 @@ namespace Locadora.Models
     {
         ActionResult <IEnumerable<Filme>> GetAllFilmes();
         ActionResult <Filme> GetFilmeById(int id);
-        ActionResult <Filme> CreateFilme(Filme filme);
-        ActionResult UpdateFilme(int id, Filme filme);
+        ActionResult <Filme> CreateFilme(FilmeCreateAlterDto filme);
+        ActionResult UpdateFilme(int id, FilmeCreateAlterDto filme);
         ActionResult DeleteFilme(int id);
-        ActionResult DeleteFilmes(List<Filme> filmes);
+        ActionResult DeleteFilmes(int[] id);
     }
 }

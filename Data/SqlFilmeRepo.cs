@@ -1,17 +1,37 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Transactions;
 using Locadora.Model;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Locadora.Data
 {
     public class SqlFilmeRepo : IFilmeRepo
     {
         private readonly LocadoraContext _context;
+        private IDbContextTransaction transaction;
 
         public SqlFilmeRepo(LocadoraContext context)
         {
             _context = context;
+        }
+        public void BeginTransaction(){
+            transaction = _context.Database.BeginTransaction();        
+        }
+        public void Rollback(){
+            if(transaction != null)
+            {
+                transaction.Rollback() ;
+                transaction =null;
+            }
+        }
+        public void Commit(){
+            if(transaction != null)
+            {
+                transaction.Commit() ;
+                transaction =null;
+            }
         }
         public void CreateFilme(Filme filme)
         {
@@ -43,7 +63,7 @@ namespace Locadora.Data
 
         public bool SaveChanges()
         {
-            return(_context.SaveChanges() >= 0);
+            return(_context.SaveChanges() >=0);
         }
 
     }
