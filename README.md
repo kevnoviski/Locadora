@@ -12,6 +12,7 @@ Teste
 
 3 - Abra o postman e insira o seguinte endpoint :http://localhost:5000/api/filme/
   *Utiliza os metodos:
+  
     GET  /{id} Ex: http://localhost:5000/api/filme/1
     GET        Ex:http://localhost:5000/api/filme
     
