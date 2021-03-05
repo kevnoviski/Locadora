@@ -11,7 +11,8 @@ Teste
 2 - Abra o projeto no Visual Code e execute =  dotnet run
 
 3 - Abra o postman e insira o seguinte endpoint :http://localhost:5000/api/filme/
-  *Utiliza os metodos:
+  
+  *Utilizar os metodos:
   
     GET  /{id} Ex: http://localhost:5000/api/filme/1
     GET        Ex:http://localhost:5000/api/filme
